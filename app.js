@@ -4,6 +4,8 @@ const { engine } = require("express-handlebars");
 
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 const publicDirectoryPath = path.join(__dirname, "../public");
 
 app.engine("handlebars", engine());
@@ -17,6 +19,4 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.listen(5000, () => {
-  console.log("Server running");
-});
+app.listen(port);
