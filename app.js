@@ -17,4 +17,6 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.listen(5000);
+app.listen(5000, () => {
+  console.log("Server running");
+});
